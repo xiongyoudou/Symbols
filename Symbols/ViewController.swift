@@ -25,6 +25,9 @@ class ViewController: UIViewController {
         let staticInfo = getDataFromStatic()
         print(staticInfo)
         
+        let student = getStudentData()
+        print(student)
+        
         let pid = getPid()
         print(pid)
         
@@ -43,9 +46,17 @@ class ViewController: UIViewController {
     }
     
     func getDataFromStatic() -> String {
-        let dynamicProvider = DataProviderFromDynamic(age: 12, name: "lily")
+        let dynamicProvider = DataProviderFromDynamic(age: 12, name: "lilggggssafdasdfqwery")
         let info = dynamicProvider.provideData()
         return info
+    }
+    
+    struct Student{
+        var id: Int
+        var name: String
+    }
+    func getStudentData() -> Student {
+        return Student(id: 101, name: "what can i do for you")
     }
     
     func getPid() -> Int32 {
