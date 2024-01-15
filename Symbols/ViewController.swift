@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         print(staticInfo)
         
         let student = getStudentData()
-        print(student)
+        printStudent(student: student)
         
         let pid = getPid()
         print(pid)
@@ -57,6 +57,10 @@ class ViewController: UIViewController {
     }
     func getStudentData() -> Student {
         return Student(id: 101, name: "what can i do for you")
+    }
+    func printStudent(student: Student) {
+        print(student.id)
+        print(student.name)
     }
     
     func getPid() -> Int32 {
