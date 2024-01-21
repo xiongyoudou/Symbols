@@ -70,32 +70,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F36296F6-1816-49F9-AF6A-7FCF44A8A2A2"
+            uuid = "2EBE9CDF-1193-41DF-A45B-6FDB5492BDDE"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Symbols/TestMemoryFunction.swift"
+            filePath = "Symbols/TestAssembleOnString.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
-            landmarkName = "test_unsafeRawPointers()"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4776F0FB-3F35-4323-991B-711B289F98F2"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Symbols/TestMemoryFunction.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
-            landmarkName = "test_unsafeRawPointers()"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "printShortStr(_:)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>

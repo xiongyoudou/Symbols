@@ -52,20 +52,22 @@ func test_UnsafePointer() {
     let count = 2
     let pointer = UnsafeMutablePointer<Int>.allocate(capacity: count)
     pointer.initialize(repeating: 0, count: count)
-    defer {
-        pointer.deinitialize(count: count)
-        pointer.deallocate()
-    }
     
     pointer.pointee = 42
     pointer.advanced(by: 1).pointee = 6
-    print(pointer.pointee)
-    print(pointer.advanced(by: 1).pointee)
     
     let bufferPointer = UnsafeBufferPointer(start: pointer, count: count)
     for (index, value) in bufferPointer.enumerated() {
         print("value \(index): \(value)")
     }
+    
+    /// We can also create the rawPointer firstly
+    /// And then create the typed pointer by binding the memory to the required type Int
+//    let rawPointer = UnsafeMutableRawPointer.allocate(
+//        byteCount: byteCount,
+//        alignment: alignment)
+//    let typedPointer = rawPointer.bindMemory(to: Int.self, capacity: count)
+    
     
     /// 通过数组创建一个非empty的unsafepointer
     let array: [Int] = [1, 2, 3, 4, 5]
@@ -155,6 +157,7 @@ func test_withUnsafeBytes() {
     print("Getting the bytes of an instance")
     var sampleStruct = SampleStruct(number: 25, flag: true)
     withUnsafeBytes(of: &sampleStruct) { bytes in
+        // body: UnsafeRawBufferPointer
         for byte in bytes {
             print(byte)
         }
